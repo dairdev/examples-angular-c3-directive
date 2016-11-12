@@ -1,0 +1,34 @@
+{
+  "name": "angularjs-c3-directive",
+  "version": "1.0.0",
+  "description": "Examples of angularjs 1.5+ with c3-angular-directive",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dairdev/examples-angular-c3-directive.git"
+  },
+  "keywords": [
+    "angularjs",
+    "c3js",
+    "c3-angular-directive"
+  ],
+  "author": "Dennis Infantas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dairdev/examples-angular-c3-directive/issues"
+  },
+  "homepage": "https://github.com/dairdev/examples-angular-c3-directive#readme",
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.13",
+    "gulp-minify": "0.0.14",
+    "gulp-uglify": "^2.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.7.0"
+  }
+}

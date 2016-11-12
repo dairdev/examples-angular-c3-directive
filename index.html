@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="examplesC3ng">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS C3JS Directive</title>
+	<link rel="stylesheet" href="node_modules/c3/c3.min.css">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+</head>
+<body ng-controller="ExamplesController as ctrl">
+	<h1>Examples of c3-angular with json data</h1>
+	<div ng-view class="container-fluid">
+		<div class="row">
+			<h2>Gauge</h2>
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<label for="txtMax">Max</label>
+				<input id="txtMax" type="text" name="txtMax" 
+				ng-model="ctrl.gaugeMax" ng-change="ctrl.updateGauge()" />
+				<label for="txtValue">Value</label>
+				<input id="txtValue" type="text" name="txtValue" 
+				ng-model="ctrl.gaugeValue" ng-change="ctrl.updateGauge()" />
+			</div>
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<c3chart bindto-id="chartGauge"
+					chart-columns="ctrl.gauge.column"
+					chart-data="ctrl.gauge.data" 
+					callback-function="ctrl.gaugeCallback">
+					<chart-gauge min = "1"
+						width="30"
+						max = "{{ ctrl.gaugeMax }}" />
+					</c3chart>
+				</div>
+			</div>
+		</div>
+</body>
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/d3/d3.min.js"></script>
+<script src="node_modules/c3/c3.min.js"></script>
+<script src="node_modules/c3-angular/c3-angular.min.js"></script>
+<script src="js/app.js"></script>
+</html>
